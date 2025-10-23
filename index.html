@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Linear Regression Practice</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Linear Regression Practice</h1>
+      <p class="subtitle">Move the sliders to fit the data</p>
+    </header>
+
+    <section class="controls" id="paramControls" aria-label="Model parameters">
+      <!-- Parameter sliders will be generated here dynamically per problem degree -->
+    </section>
+
+    <section class="model-display" aria-live="polite">
+      <div><strong>Model</strong>: <code id="modelEq">y = w0 + w1·x</code></div>
+    </section>
+
+    <section class="chart-wrap" aria-label="Data and model visualization">
+      <canvas id="chart" height="420"></canvas>
+    </section>
+
+    <section class="metrics" aria-live="polite">
+      <div><strong>MSE</strong> (current line vs. data): <span id="mse">—</span></div>
+    </section>
+
+    <section class="actions">
+      <button id="newProblem" type="button">New Problem</button>
+      <button id="downloadCsv" type="button">Download CSV</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
